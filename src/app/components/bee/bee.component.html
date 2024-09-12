@@ -1,0 +1,13 @@
+@if(beeHealth() > 0) {
+<div class="bee-info-container">
+  <img [src]="beeImage()" [alt]="beeName()" [width]="beeWidth()">
+  <div class="hp-container" [style.height]="beeMaxHealth() + 'px'">
+    <div class="hp-bar" [style.height]="beeHealth() > 0 ? beeHealth() + 'px': 0 + 'px'" [style.background-color]="setHPColor()">
+    </div>
+  </div>
+  <div class="hp-info">
+    <span>HP</span>
+    <span>{{ beeHealth() + ' / ' + beeMaxHealth() }}</span>
+  </div>
+</div>
+}

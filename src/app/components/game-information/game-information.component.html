@@ -1,0 +1,34 @@
+<div class="game-info-icon" (mouseenter)="isTooltipHovered = true" (mouseleave)="isTooltipHovered = false">
+  <span>
+    ?
+  </span>
+</div>
+<div class="game-information" [ngClass]="{'tooltip': isTooltipHovered}">
+  <p>
+    This game is all about attacking the bees and making their health zero. You can attack the bees by clicking on the
+    <strong>Hit</strong> button.
+    The bees have health points from strongest to weakest. Each bee type will take different damage when hit:
+  </p>
+  <ul>
+    <li>Queen Bee: <strong>8 damage</strong></li>
+    <li>Worker Bee: <strong>10 damage</strong></li>
+    <li>Drone Bee: <strong>12 damage</strong></li>
+  </ul>
+  <p>
+    Once a group of bees is destroyed they will start attacking back when you miss a hit on them. Each hit they do will
+    reduce your health by <strong>1 point</strong>.
+  </p>
+  <p>
+    The game is finished on <strong>two conditions</strong>:
+  </p>
+  <ul>
+    <li>When all the bees are destroyed (or when the queen is destroyed)</li>
+    <li>When your health is zero</li>
+  </ul>
+  <p>
+    You can leave the game whenever you like and come back to continue playing from where you left off.
+  </p>
+  <p>
+    Also, you can add your name if you click on <strong>"Player"</strong> on the top left corner.
+  </p>
+</div>

@@ -1,0 +1,19 @@
+.player-details {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+
+button {
+    margin-top: 1rem;
+    border-radius: 1rem;
+    font-size: 1.5rem;
+    width: 6rem;    
+    background-color: lightgreen;
+    cursor: pointer;
+}
+
+.action-button {
+    display: flex;
+    justify-content: center;
+}

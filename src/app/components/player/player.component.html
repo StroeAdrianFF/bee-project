@@ -1,0 +1,20 @@
+<div class="player-details">
+    <span class="player" (click)="applyNameChanges(true)">Player: {{playerName.length ? playerName : 'Not Assigned Yet'}}</span>
+    <div class="health-bar">
+        <div class="health" [style.width]="playerHealth + 'px'"></div>
+    </div>
+    <span class="health-value">{{playerHealth}}</span>
+</div>
+
+@if (editPlayerName) {
+    <div class="modal-backdrop">
+    </div>
+    <div class="modal">
+        <p>Edit your player name here.</p>
+        @if (!playerName.length) {
+            <p>Currently, you do not have a name assigned!</p>
+        }
+        <input type="text" [(ngModel)]="playerName" />
+        <button (click)="applyNameChanges(false)">Apply Changes</button>
+    </div>
+}

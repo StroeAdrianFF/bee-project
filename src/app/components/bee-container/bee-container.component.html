@@ -1,0 +1,45 @@
+@if(queenBees.length){
+    <div class="queen">
+        <span>
+            Queen
+        </span>
+        @for (queenBee of queenBees; track queenBee) {
+            <app-bee [beeImage]="queenBee.beeImage" 
+                     [beeWidth]="queenBee.beeWidth" 
+                     [beeName]="queenBee.beeType" 
+                     [beeHealth]="queenBee.health" 
+                     [beeMaxHealth]="queenBee.maxHealth">
+            </app-bee>
+        }
+    </div>
+}
+@if(workerBees.length) {
+    <div class="worker">
+        <span>
+            Workers
+        </span>
+        @for (workerBee of workerBees; track workerBee) {
+            <app-bee [beeImage]="workerBee.beeImage" 
+                     [beeWidth]="workerBee.beeWidth" 
+                     [beeName]="workerBee.beeType" 
+                     [beeHealth]="workerBee.health" 
+                     [beeMaxHealth]="workerBee.maxHealth">
+            </app-bee>
+        }
+    </div>
+}
+@if(droneBees.length){
+    <div class="drone">
+        <span>
+            Drones
+        </span>
+        @for (droneBee of droneBees; track droneBee) {
+            <app-bee [beeImage]="droneBee.beeImage" 
+                     [beeWidth]="droneBee.beeWidth" 
+                     [beeName]="droneBee.beeType" 
+                     [beeHealth]="droneBee.health" 
+                     [beeMaxHealth]="droneBee.maxHealth">
+            </app-bee>
+        }
+    </div>
+}

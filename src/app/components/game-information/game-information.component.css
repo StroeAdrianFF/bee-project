@@ -1,0 +1,32 @@
+.game-info-icon {
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    right: 1rem;
+    top: 0.5rem;
+    font-size: 2rem;
+    border: 1px solid #000;
+    border-radius: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.game-information {
+    display: none;
+    position: absolute;
+    right: 1rem;
+    top: 4rem;
+    width: 30rem;
+    height: fit-content;
+    border: 1px solid black;
+    border-radius: 1rem;
+    background-color: lightblue;
+    padding: 1rem;
+}
+
+.tooltip {
+    display: block;
+}
+

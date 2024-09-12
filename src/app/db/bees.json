@@ -1,0 +1,114 @@
+[
+    {
+        "beeWidth": 450,
+        "beeImage": "../assets/svgs/queen_transparent_1.svg",
+        "beeName": "Queen Bee",
+        "beeType": "queen",
+        "health": 100,
+        "maxHealth": 100
+    },
+    {
+        "beeWidth": 125,
+        "beeImage": "../assets/svgs/worker_transparent_1.svg",
+        "beeName": "Worker Bee 1",
+        "beeType": "worker",
+        "health": 75,
+        "maxHealth": 75
+    },
+    {
+        "beeWidth": 125,
+        "beeImage": "../assets/svgs/worker_transparent_1.svg",
+        "beeName": "Worker Bee 2",
+        "beeType": "worker",
+        "health": 75,
+        "maxHealth": 75
+    },
+    {
+        "beeWidth": 125,
+        "beeImage": "../assets/svgs/worker_transparent_1.svg",
+        "beeName": "Worker Bee 3",
+        "beeType": "worker",
+        "health": 75,
+        "maxHealth": 75
+    },
+    {
+        "beeWidth": 125,
+        "beeImage": "../assets/svgs/worker_transparent_1.svg",
+        "beeName": "Worker Bee 4",
+        "beeType": "worker",
+        "health": 75,
+        "maxHealth": 75
+    },
+    {
+        "beeWidth": 125,
+        "beeImage": "../assets/svgs/worker_transparent_1.svg",
+        "beeName": "Worker Bee 5",
+        "beeType": "worker",
+        "health": 75,
+        "maxHealth": 75
+    },
+    {
+        "beeWidth": 40,
+        "beeImage": "../assets/svgs/drone_transparent_1.svg",
+        "beeName": "Drone Bee 1",
+        "beeType": "drone",
+        "health": 50,
+        "maxHealth": 50
+    },
+    {
+        "beeWidth": 40,
+        "beeImage": "../assets/svgs/drone_transparent_1.svg",
+        "beeName": "Drone Bee 2",
+        "beeType": "drone",
+        "health": 50,
+        "maxHealth": 50
+    },
+    {
+        "beeWidth": 40,
+        "beeImage": "../assets/svgs/drone_transparent_1.svg",
+        "beeName": "Drone Bee 3",
+        "beeType": "drone",
+        "health": 50,
+        "maxHealth": 50
+    },
+    {
+        "beeWidth": 40,
+        "beeImage": "../assets/svgs/drone_transparent_1.svg",
+        "beeName": "Drone Bee 4",
+        "beeType": "drone",
+        "health": 50,
+        "maxHealth": 50
+    },
+    {
+        "beeWidth": 40,
+        "beeImage": "../assets/svgs/drone_transparent_1.svg",
+        "beeName": "Drone Bee 5",
+        "beeType": "drone",
+        "health": 50,
+        "maxHealth": 50
+    },
+    {
+        "beeWidth": 40,
+        "beeImage": "../assets/svgs/drone_transparent_1.svg",
+        "beeName": "Drone Bee 6",
+        "beeType": "drone",
+        "health": 50,
+        "maxHealth": 50
+    },
+    {
+        "beeWidth": 40,
+        "beeImage": "../assets/svgs/drone_transparent_1.svg",
+        "beeName": "Drone Bee 7",
+        "beeType": "drone",
+        "health": 50,
+        "maxHealth": 50
+    },
+    {
+        "beeWidth": 40,
+        "beeImage": "../assets/svgs/drone_transparent_1.svg",
+        "beeName": "Drone Bee 8",
+        "beeType": "drone",
+        "health": 50,
+        "maxHealth": 50
+    }
+]

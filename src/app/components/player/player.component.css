@@ -1,0 +1,76 @@
+.player-details {
+    display: flex;
+    align-items: center;
+}
+
+.player {
+    font-weight: bold;
+    margin-right: 0.5rem;
+    cursor: pointer;
+}
+
+.health-bar {
+    width: 100px;
+    height: 1rem;
+    border: 1px solid black;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.health {
+    height: 1rem;
+    background-color: #4caf50;
+}
+
+.health-value {
+    position: relative;
+    right: 4rem;
+}
+
+
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: gray; 
+    opacity: 0.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal {
+    width: 30rem;
+    height: 15rem;
+    background-color: lightblue;
+    border: 1px solid #000;
+    position: fixed;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    border-radius: 1rem;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid #000;
+    border-radius: 0.5rem;
+    background-color: #4caf50;
+    color: white;
+    cursor: pointer;
+}
+
+input {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid #000;
+    border-radius: 0.5rem;
+}

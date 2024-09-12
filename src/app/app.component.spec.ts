@@ -1,29 +1,46 @@
 import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { UtilityService } from './services/utility/utility.service';
+import { of } from 'rxjs';
 
 describe('AppComponent', () => {
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [AppComponent],
-    }).compileComponents();
-  });
+    let component: AppComponent;
+    let utilityService: UtilityService;
 
-  it('should create the app', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app).toBeTruthy();
-  });
+    beforeEach(async () => {
+        const utilityServiceMock = {
+            getIsGameOver: jest.fn().mockReturnValue(of({ gameOver: false, hasWon: false }))
+        };
 
-  it(`should have the 'bee-game' title`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('bee-game');
-  });
+        await TestBed.configureTestingModule({
+            imports: [AppComponent],
+            providers: [
+                { provide: UtilityService, useValue: utilityServiceMock }
+            ]
+        }).compileComponents();
 
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, bee-game');
-  });
+        const fixture = TestBed.createComponent(AppComponent);
+        component = fixture.componentInstance;
+        utilityService = TestBed.inject(UtilityService);
+    });
+
+    it('should create the app component', () => {
+        expect(component).toBeTruthy();
+    });
+
+    it(`should have as title 'Bee Game'`, () => {
+        expect(component.title).toEqual('Bee Game');
+    });
+
+    it('should call getIsGameOver on init', () => {
+        component.ngOnInit();
+
+        expect(utilityService.getIsGameOver).toHaveBeenCalled();
+    });
+
+    it('should set damage to a random value between 0 and 99 when attackBees is called', () => {
+        jest.spyOn(Math, 'random').mockReturnValue(0.5);
+        component.attackBees();
+        expect(component.damage).toBe(50);
+    });
 });

@@ -1,0 +1,15 @@
+<div class="modal-backdrop">
+</div>
+<div class="modal">
+  <h2>Game Over</h2>
+  @if (hasPlayerWon) {
+    <div>
+      The game has finished. You have defeated all the bees!
+    </div>
+  } @else {
+    <div>
+      The game has finished. The bees have won!
+    </div>
+  }
+    <button class="play-again" (click)="resetGame()">Play Again!</button>
+</div>
