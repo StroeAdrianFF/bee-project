@@ -3,6 +3,7 @@ import { UtilityService } from '../../services/utility/utility.service';
 import { BeeService } from '../bee/bee.service';
 import { take } from 'rxjs';
 import { IBee } from '../../interfaces/bee.model';
+import { IGameState } from '../../interfaces/game-state.model';
 
 @Component({
   selector: 'app-restart-game',
@@ -33,7 +34,7 @@ export class RestartGameComponent implements OnInit {
   checkIfPlayerWon(): void {
     this.utilityService.getIsGameOver()
       .pipe(take(1))
-      .subscribe((gameOver: { gameOver: boolean, hasWon: boolean }) => {
+      .subscribe((gameOver: IGameState) => {
         this.hasPlayerWon = gameOver.hasWon;
       });
   }

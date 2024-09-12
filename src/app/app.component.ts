@@ -8,6 +8,7 @@ import { Observable, take } from 'rxjs';
 import { AsyncPipe, CommonModule } from '@angular/common';
 import { PlayerComponent } from './components/player/player.component';
 import { GameInformationComponent } from "./components/game-information/game-information.component";
+import { IGameState } from './interfaces/game-state.model';
 
 @Component({
   selector: 'app-root',
@@ -27,7 +28,7 @@ export class AppComponent implements OnInit {
   title = 'Bee Game';
 
   damage: number = 0;
-  isGameOver$: Observable<{ gameOver: boolean; hasWon: boolean }> | null = null;
+  isGameOver$: Observable<IGameState> | null = null;
   readonly beeTypeEnum: typeof BeeTypeEnum = BeeTypeEnum;
 
   constructor(

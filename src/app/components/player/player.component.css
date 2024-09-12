@@ -7,13 +7,14 @@
     font-weight: bold;
     margin-right: 0.5rem;
     cursor: pointer;
+    font-size: 1.5rem;
 }
 
 .health-bar {
-    width: 100px;
+    width: 6.25rem;
     height: 1rem;
     border: 1px solid black;
-    border-radius: 10px;
+    border-radius: 0.625rem;
     overflow: hidden;
 }
 
@@ -73,4 +74,11 @@ input {
     padding: 0.5rem 1rem;
     border: 1px solid #000;
     border-radius: 0.5rem;
+}
+
+.player-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
 }

@@ -1,9 +1,9 @@
 .game-info-icon {
-    position: absolute;
+    position: relative;
     width: 2rem;
     height: 2rem;
-    right: 1rem;
-    top: 0.5rem;
+    left: 1rem;
+    top: 1rem;
     font-size: 2rem;
     border: 1px solid #000;
     border-radius: 5rem;
@@ -16,8 +16,9 @@
 .game-information {
     display: none;
     position: absolute;
-    right: 1rem;
-    top: 4rem;
+    bottom: 3rem;
+    max-width: fit-content;
+    overflow-wrap: break-word;
     width: 30rem;
     height: fit-content;
     border: 1px solid black;
@@ -30,3 +31,9 @@
     display: block;
 }
 
+@media (max-width: 768px) {
+    .game-information {
+        left: 1rem; 
+        right: 1rem; 
+    }
+}

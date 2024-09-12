@@ -1,12 +1,11 @@
-<app-player></app-player>
-
-<app-game-information></app-game-information>
-
 <app-bee-container [damageReceived]="damage"></app-bee-container>
 
 <div class="action-button">
   <button (click)="attackBees()">Hit</button>
+  <app-game-information></app-game-information>
 </div>
+<app-player></app-player>
+
 
 @if ((isGameOver$ | async)?.gameOver){
   <app-restart-game></app-restart-game>

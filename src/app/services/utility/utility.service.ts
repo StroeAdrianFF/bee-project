@@ -1,17 +1,18 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
+import { IGameState } from '../../interfaces/game-state.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UtilityService {
 
-  private isGameOver: BehaviorSubject<{gameOver: boolean, hasWon: boolean}> = new BehaviorSubject<{gameOver: boolean, hasWon: boolean}>({gameOver: false, hasWon: false});
+  private isGameOver: BehaviorSubject<IGameState> = new BehaviorSubject<IGameState>({gameOver: false, hasWon: false});
   private playerHealth: BehaviorSubject<number> = new BehaviorSubject<number>(100);
 
   constructor() { }
 
-  getIsGameOver(): Observable<{gameOver: boolean, hasWon: boolean}> {
+  getIsGameOver(): Observable<IGameState> {
     return this.isGameOver.asObservable();
   }
 
